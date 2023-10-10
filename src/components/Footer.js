@@ -2,7 +2,10 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer class="relative text-gray-600 body-font bg-gradient-to-r from-violet-300 to-fuchsia-500 sm:bg-black md: lg:bg-green-400">
+    <footer
+      class="relative text-gray-600 body-font bg-gradient-to-r from-violet-300 to-fuchsia-500 sm:bg-black md: lg:bg-green-400"
+      id="about"
+    >
       <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">

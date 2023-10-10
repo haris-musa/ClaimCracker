@@ -39,7 +39,10 @@ function CheckedClaim() {
   return (
     <div>
       {/* Div containing Rows */}
-      <div className="flex flex-wrap  w-[100%]  shadow-lg items-center justify-center sm:flex-auto flex-auto ">
+      <div
+        className="flex flex-wrap  w-[100%]  shadow-lg items-center justify-center sm:flex-auto flex-auto "
+        id="claims"
+      >
         {data.map((item, ind) => {
           return (
             <>

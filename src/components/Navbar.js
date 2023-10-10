@@ -5,9 +5,24 @@ function Navbar() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const scrollToSection = (event, sectionId, offset) => {
+    event.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      console.log(section);
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
     <div>
-      <nav className="bg-gradient-to-r from-violet-500 to-fuchsia-500 p-4">
+      <nav
+        className=" w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 p-4"
+        id="nav"
+      >
         <div className="flex justify-between items-center">
           <a className=" flex  items-center ">
             <svg
@@ -30,17 +45,41 @@ function Navbar() {
           </a>
 
           <div className="hidden lg:flex lg:justify-center lg:m-auto lg:gap-10  space-x-4">
-            <a href="#" className="text-white hover:text-gray-300">
-              <NavButtons ButtonText="Home" onClick={() => {}} />
+            <a href="#" className="text-white text-3xl hover:text-gray-300">
+              <NavButtons
+                ButtonText="Home"
+                onClick={(event) => scrollToSection(event, "nav", 100)}
+              />
             </a>
-            <a href="#" className="text-white hover:text-gray-300">
-              <NavButtons ButtonText="Updates" onClick={() => {}} />
+            <a href="#" className="text-white   text-3xl hover:text-gray-300">
+              <NavButtons
+                ButtonText="Articles"
+                onClick={(event) => scrollToSection(event, "articles", 200)}
+              />
             </a>
-            <a href="#" className="text-white hover:text-gray-300">
-              <NavButtons ButtonText="Get involved" onClick={() => {}} />
+            <a href="#" className="text-white  text-3xl hover:text-gray-300">
+              <NavButtons
+                ButtonText="Claims"
+                onClick={(event) => scrollToSection(event, "claims", 200)}
+              />
             </a>
-            <a href="#" className="text-white hover:text-gray-300">
-              <NavButtons ButtonText="Training " onClick={() => {}} />
+            <a href="#" className="text-white  text-3xl hover:text-gray-300">
+              <NavButtons
+                ButtonText="Model "
+                onClick={(event) => scrollToSection(event, "model", 200)}
+              />
+            </a>
+            <a href="#" className="text-white text-3xl hover:text-gray-300">
+              <NavButtons
+                ButtonText="Working "
+                onClick={(event) => scrollToSection(event, "flow", 200)}
+              />
+            </a>
+            <a href="#" className="text-white text-3xl hover:text-gray-300">
+              <NavButtons
+                ButtonText="About Us "
+                onClick={(event) => scrollToSection(event, "about", 200)}
+              />
             </a>
             {/* Add more menu items as needed */}
           </div>

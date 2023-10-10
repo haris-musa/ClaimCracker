@@ -16,7 +16,10 @@ function ModelWorking() {
     },
   ];
   return (
-    <div className=" flex flex-wrap relative  shadow-lg   items-center justify-center  w-[100%]  ">
+    <div
+      className=" flex flex-wrap relative  shadow-lg   items-center justify-center  w-[100%]  "
+      id="model"
+    >
       {/* first row */}
       {data.map((i, ind) => {
         return (
