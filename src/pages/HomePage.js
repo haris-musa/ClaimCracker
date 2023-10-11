@@ -14,8 +14,9 @@ function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <Statistics />
         <CheckedClaim />
+        <Statistics />
+
         <ArticlesSection />
         <FlowSection />
         <ModelWorking />

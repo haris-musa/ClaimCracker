@@ -1,19 +1,98 @@
 import React from "react";
-import ParticlesBackground from "../constants/ParticlesBackground";
+// import ParticlesBackground from "../constants/ParticlesBackground";
 import Typed from "react-typed";
 import { SearchIcon } from "@heroicons/react/solid";
+import { useCallback } from "react";
+import Particles from "react-particles";
+import { loadSlim } from "tsparticles-slim";
 
 function Hero() {
+  const particlesInit = useCallback(async (engine) => {
+    console.log(engine);
+    await loadSlim(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async (container) => {
+    await console.log(container);
+  }, []);
   return (
     <>
-      <section className="flex h-screen text-gray-600 body-font bg-gradient-to-r from-violet-500 to-fuchsia-500">
-        <ParticlesBackground />
-        <div className="container mx-auto flex flex-col px-5 py-24 justify-center items-center">
+      <section className="flex  text-gray-600 body-font bg-gradient-to-r from-violet-500 to-fuchsia-500 z-0 p-[12%] relative  w-[100%] mx-auto h-[100%] gap-10 max-[700px]:flex-col items-center ">
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          className="absolute w-[100%] h-[100%] inset-0 z-0 "
+          loaded={particlesLoaded}
+          options={{
+            fullScreen: false,
+            background: {
+              color: {
+                value: "#fff",
+              },
+            },
+            particles: {
+              number: {
+                value: 60,
+                density: { enable: true, value_area: 800 },
+              },
+              color: { value: "#000" },
+              shape: {
+                type: "circle",
+              },
+              opacity: {
+                value: 0.3,
+                random: true,
+                anim: {
+                  enable: false,
+                  speed: 1,
+                  opacity_min: 0.1,
+                  sync: false,
+                },
+              },
+              size: {
+                value: 3,
+                random: true,
+                anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+              },
+              line_linked: {
+                enable: true,
+                distance: 150,
+                color: "#000",
+                opacity: 0.3,
+                width: 1,
+              },
+              move: {
+                enable: true,
+                speed: 1,
+                direction: "right",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                bounce: false,
+                attract: { enable: false, rotateX: 600, rotateY: 1200 },
+              },
+            },
+            interactivity: {
+              detect_on: "canvas",
+              events: {
+                onhover: { enable: true, mode: "grab" },
+                onclick: { enable: true, mode: "repulse" },
+                resize: true,
+              },
+              modes: {
+                grab: { distance: 200, line_linked: { opacity: 0.2 } },
+                repulse: { distance: 200, duration: 0.4 },
+              },
+            },
+            retina_detect: true,
+          }}
+        />{" "}
+        <div className="container mx-auto flex flex-col px-5 py-24 justify-center items-center z-10">
           <div className="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
-            <h1 className="title-font sm:text-8xl text-4xl mb-4 font-medium text-white">
+            <h1 className="title-font sm:text-8xl text-4xl mb-4 font-medium text-black">
               Find out the truth!
             </h1>
-            <p className="mb-8 leading-relaxed text-gray-200 ">
+            <p className="mb-8 leading-relaxed text-black ">
               ClaimCracker provides a way to quickly find out about truthfulness
               of the claims made by
               <div className="">
@@ -28,16 +107,16 @@ function Hero() {
               />
             </p>
             <div className=" flex flex-wrap justify-center items-end w-[100%] ">
-              <div className="relative sm:flex-grow  text-left">
+              <div className="relative sm:flex-grow  text-left  ">
                 <input
-                  className="w-[100%] p-2  flex bg-inherit rounded-full focus:outline-none text-sm py-3 text-white placeholder-white       border-[1px]"
+                  className="w-[100%] p-2  flex bg-inherit border-black rounded-full focus:outline-none text-sm py-3 text-black placeholder-black       border-[1px]"
                   type="text"
                   placeholder={"  Search"}
                 />
               </div>
 
-              <div className=" text-white  group-hover:bg-gray-200  h-full flex items-center justify-center">
-                <SearchIcon className="w-8 absolute mr-14" />
+              <div className=" text-black  group-hover:bg-gray-200  h-full flex items-center justify-center mb-5 ">
+                <SearchIcon className="w-8 absolute mr-14  " />
               </div>
             </div>
             <p className="text-sm mt-2 text-gray-200 mb-8 w-full">

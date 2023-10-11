@@ -17,7 +17,7 @@ function ModelWorking() {
   ];
   return (
     <div
-      className=" flex flex-wrap relative  shadow-lg   items-center justify-center  w-[100%]  "
+      className=" flex flex-wrap relative    items-center justify-center  w-[100%]  "
       id="model"
     >
       {/* first row */}

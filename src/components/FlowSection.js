@@ -18,7 +18,7 @@ function FlowSection() {
 
   return (
     <div
-      className=" flex flex-wrap relative  shadow-lg   items-center justify-center  w-[100%]  "
+      className=" flex flex-wrap relative    items-center justify-center  w-[100%]  "
       id="flow"
     >
       {/* first row */}

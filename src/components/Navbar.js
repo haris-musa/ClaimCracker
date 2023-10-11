@@ -19,26 +19,12 @@ function Navbar() {
   };
   return (
     <div>
-      <nav
-        className=" w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 p-4"
-        id="nav"
-      >
+      <nav className="fixed w-full  bg-gray-800 p-4 opacity-50 z-50" id="nav">
         <div className="flex justify-between items-center">
-          <a className=" flex  items-center ">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="w-10 h-10 text-white p-2 bg-purple-600 rounded-full"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
+          <a className=" flex ml-10 items-center ">
+            <img src="/logo.jpg" width={"50px"} alt="" />
             <span className="  lg:ml-3 lg:text-xl lg:text-white lg:cursor-pointer">
-              <p className=" hidden sm:hidden md:hidden lg:block">
+              <p className=" hidden sm:hidden md:hidden lg:block text-3xl">
                 ClaimCracker
               </p>
             </span>
@@ -48,7 +34,7 @@ function Navbar() {
             <a href="#" className="text-white text-3xl hover:text-gray-300">
               <NavButtons
                 ButtonText="Home"
-                onClick={(event) => scrollToSection(event, "nav", 100)}
+                onClick={(event) => scrollToSection(event, "nav", 200)}
               />
             </a>
             <a href="#" className="text-white   text-3xl hover:text-gray-300">

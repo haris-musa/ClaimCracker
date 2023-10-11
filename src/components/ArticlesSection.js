@@ -46,14 +46,14 @@ function ArticlesSection() {
 
   return (
     <div
-      className=" flex flex-wrap relative  shadow-lg   items-center justify-center  w-[100%]  "
+      className=" flex flex-wrap relative    items-center justify-center  w-[100%]  "
       id="articles"
     >
       {/* first row */}
       {data.map((i, ind) => {
         return (
           <>
-            <div className=" flex  flex-wrap  lg:w-[30%] p-6  xl:w-[30%] sm:w-full w-full">
+            <div className=" flex  flex-wrap  lg:w-[30%] p-6  xl:w-[30%] sm:w-full w-full mt-[5%]">
               <div className="    justify-around flex ">
                 {/* First Card */}
 
