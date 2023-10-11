@@ -1,33 +1,17 @@
 import React from "react";
-
+import Lottie from "lottie-react";
+import animationData from "../assets/phone.json";
 function FlowSection() {
-  const data = [
-    {
-      image: "./gg.png",
-      heading: "Check your Facts with Claim Cracker",
-      details:
-        "At the heart of our platform, we have a state-of-the-art Natural Language Processing (NLP) system that parses and understands the structure and semantics of the text you submit. Once your text is processed, our system cross-references it with a vast database of verified information to identify claims or statements that might need further verification. We also integrate with the ClaimBuster API, a leading tool in the fact-checking domain. This integration ensures that the text is checked against a wide array of sources and databases for utmost accuracy.",
-    },
-    {
-      image: "./nice.png",
-      heading: "In addition to our Automated Fact Checker ",
-      details:
-        "After the analysis is complete, our platform highlights parts of the text that might be inaccurate or contentious, providing you with relevant sources or references for each identified claim.It's worth noting that while our system is designed to be highly accurate, no fact-checking tool can guarantee 100% accuracy. We always recommend reviewing the provided sources and using your judgment i interpreting the results.",
-    },
-  ];
-
   return (
     <div
-      className=" flex flex-wrap relative    items-center justify-center  w-[100%]  "
+      className=" flex flex-wrap    bg-black w-[100%]  min-h-screen mt-[5%] p-10"
       id="flow"
     >
-      {/* first row */}
-      {data.map((i, ind) => {
-        return (
-          <>
-            <div className="p-6 flex  flex-wrap  lg:w-[30%] xl:w-[30%] sm:w-full w-full">
-              <div className="    justify-around flex ">
-                {/* First Card */}
+      <p className="text-4xl text-white">Hello</p>
+      <div className="relative  w-[100%]  min-h-screen my-auto ">
+        <div className="absolute right-0    bg-green-400 w-[40%]  ">
+          {/* <div className="    justify-around flex "> */}
+          {/* First Card
 
                 <div class=" bg-white border border-gray-300 shadow-lg">
                   <a href="#">
@@ -70,11 +54,10 @@ function FlowSection() {
                     </a>
                   </div>
                 </div>
-              </div>
-            </div>
-          </>
-        );
-      })}
+              </div> */}
+          <Lottie animationData={animationData} />
+        </div>
+      </div>
     </div>
   );
 }

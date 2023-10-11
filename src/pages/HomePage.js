@@ -12,15 +12,12 @@ function HomePage() {
     <div>
       {" "}
       <Navbar />
-      <main>
-        <Hero />
-        <CheckedClaim />
-        <Statistics />
-
-        <ArticlesSection />
-        <FlowSection />
-        <ModelWorking />
-      </main>
+      <Hero />
+      <CheckedClaim />
+      <Statistics />
+      <ArticlesSection />
+      <FlowSection />
+      <ModelWorking />
       <Footer />
     </div>
   );

@@ -40,7 +40,7 @@ function CheckedClaim() {
     <div>
       {/* Div containing Rows */}
       <div
-        className="flex flex-wrap  w-[100%]   items-center justify-center sm:flex-auto flex-auto  "
+        className="flex flex-wrap  w-[100%]   items-center justify-center sm:flex-auto flex-auto  mt-[5%]"
         id="claims"
       >
         {data.map((item, ind) => {
