@@ -24,44 +24,44 @@ function Navbar() {
           <a className=" flex ml-10 items-center ">
             <img src="/logo.jpg" width={"50px"} alt="" />
             <span className="  lg:ml-3 lg:text-xl lg:text-white lg:cursor-pointer">
-              <p className=" hidden sm:hidden md:hidden lg:block text-3xl">
+              <p className=" hidden sm:hidden md:hidden lg:block text-xl">
                 ClaimCracker
               </p>
             </span>
           </a>
 
           <div className="hidden lg:flex lg:justify-center lg:m-auto lg:gap-10  space-x-4">
-            <a href="#" className="text-white text-3xl hover:text-gray-300">
+            <a href="#" className="text-white text-xl hover:text-gray-300">
               <NavButtons
                 ButtonText="Home"
                 onClick={(event) => scrollToSection(event, "nav", 200)}
               />
             </a>
-            <a href="#" className="text-white   text-3xl hover:text-gray-300">
+            <a href="#" className="text-white   text-xl hover:text-gray-300">
               <NavButtons
                 ButtonText="Articles"
                 onClick={(event) => scrollToSection(event, "articles", 200)}
               />
             </a>
-            <a href="#" className="text-white  text-3xl hover:text-gray-300">
+            <a href="#" className="text-white  text-xl hover:text-gray-300">
               <NavButtons
                 ButtonText="Claims"
                 onClick={(event) => scrollToSection(event, "claims", 200)}
               />
             </a>
-            <a href="#" className="text-white  text-3xl hover:text-gray-300">
+            <a href="#" className="text-white  text-xl hover:text-gray-300">
               <NavButtons
                 ButtonText="Model "
                 onClick={(event) => scrollToSection(event, "model", 200)}
               />
             </a>
-            <a href="#" className="text-white text-3xl hover:text-gray-300">
+            <a href="#" className="text-white text-xl hover:text-gray-300">
               <NavButtons
                 ButtonText="Working "
                 onClick={(event) => scrollToSection(event, "flow", 200)}
               />
             </a>
-            <a href="#" className="text-white text-3xl hover:text-gray-300">
+            <a href="#" className="text-white text-xl hover:text-gray-300">
               <NavButtons
                 ButtonText="About Us "
                 onClick={(event) => scrollToSection(event, "about", 200)}
