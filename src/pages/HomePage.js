@@ -15,9 +15,9 @@ function HomePage() {
       <Hero />
       <CheckedClaim />
       <Statistics />
-      <ArticlesSection />
       <FlowSection />
-      <ModelWorking />
+      <ArticlesSection />
+      {/* <ModelWorking /> */}
       <Footer />
     </div>
   );

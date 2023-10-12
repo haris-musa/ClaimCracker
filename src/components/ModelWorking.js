@@ -20,7 +20,7 @@ function ModelWorking() {
       className=" flex flex-wrap relative    items-center justify-center  w-[100%] mt-[5%]"
       id="model"
     >
-      {/* first row */}
+      first row
       {data.map((i, ind) => {
         return (
           <>
