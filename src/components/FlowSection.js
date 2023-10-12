@@ -4,7 +4,7 @@ import animationData from "../assets/phone.json";
 function FlowSection() {
   return (
     <div
-      className="relative p-[5%] w-[100%]  bg-red-400 justify-center w-[100%] mt-[5%] p-10 "
+      className="relative p-[5%] w-[100%]  bg-gradient-to-r from-violet-500 to-fuchsia-500 justify-center w-[100%] mt-[5%] p-10 "
       id="flow"
     >
       <div className="absolute !right-0    w-[40%] ">
