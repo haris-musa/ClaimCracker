@@ -13,11 +13,11 @@ function HomePage() {
       {" "}
       <Navbar />
       <Hero />
+      <FlowSection />
       <CheckedClaim />
       <Statistics />
-      <FlowSection />
       <ArticlesSection />
-      {/* <ModelWorking /> */}
+      <ModelWorking />
       <Footer />
     </div>
   );

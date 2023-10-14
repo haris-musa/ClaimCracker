@@ -19,7 +19,7 @@ function Navbar() {
   };
   return (
     <div>
-      <nav className="fixed w-full  bg-gray-800 p-4 opacity-50 z-50" id="nav">
+      <nav className="fixed w-full  bg-gray-800 p-4 opacity-50 z-50" >
         <div className="flex justify-between items-center">
           <a className=" flex ml-10 items-center ">
             <img src="/logo.jpg" width={"50px"} alt="" />
@@ -34,7 +34,7 @@ function Navbar() {
             <a href="#" className="text-white text-xl hover:text-gray-300">
               <NavButtons
                 ButtonText="Home"
-                onClick={(event) => scrollToSection(event, "nav", 200)}
+                onClick={(event) => scrollToSection(event, "hero", 200)}
               />
             </a>
             <a href="#" className="text-white   text-xl hover:text-gray-300">

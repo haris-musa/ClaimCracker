@@ -2,7 +2,10 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="bg-gray-800 opacity-50 mt-[10%] text-center text-neutral-600  dark:text-neutral-200 lg:text-left">
+    <footer
+      className="bg-gray-800 opacity-50 mt-[10%] text-center text-neutral-600  dark:text-neutral-200 lg:text-left"
+      id="about"
+    >
       <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
         <div className="mr-12 hidden lg:block"></div>
         <div className="flex justify-center">

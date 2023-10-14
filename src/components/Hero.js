@@ -17,7 +17,10 @@ function Hero() {
   }, []);
   return (
     <>
-      <section className="flex  text-gray-600 body-font bg-gradient-to-r from-violet-500 to-fuchsia-500 z-0 p-[12%] relative  w-[100%] mx-auto h-[100%] gap-10 max-[700px]:flex-col items-center ">
+      <section
+        className="flex  text-gray-600 body-font bg-gradient-to-r from-violet-500 to-fuchsia-500 z-0 p-[12%] relative  w-[100%] mx-auto h-[100%] gap-10 max-[700px]:flex-col items-center "
+        id="hero"
+      >
         <Particles
           id="tsparticles"
           init={particlesInit}
