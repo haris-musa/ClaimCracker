@@ -13,8 +13,8 @@ function HomePage() {
       {" "}
       <Navbar />
       <Hero />
-      <FlowSection />
       <CheckedClaim />
+      <FlowSection />
       <Statistics />
       <ArticlesSection />
       <ModelWorking />

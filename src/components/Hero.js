@@ -24,78 +24,83 @@ function Hero() {
         <Particles
           id="tsparticles"
           init={particlesInit}
-          className="absolute w-[100%] h-[100%] inset-0 z-0 "
           loaded={particlesLoaded}
           options={{
-            fullScreen: false,
             background: {
               color: {
-                value: "#fff",
+                value: "",
+              },
+            },
+            fpsLimit: 300,
+            interactivity: {
+              events: {
+                onClick: {
+                  enable: true,
+                  mode: "push",
+                },
+                onHover: {
+                  enable: false,
+                  mode: "repulse",
+                },
+                resize: false,
+              },
+              modes: {
+                push: {
+                  quantity: 2,
+                },
+                repulse: {
+                  distance: 2,
+                  duration: 60,
+                },
               },
             },
             particles: {
-              number: {
-                value: 60,
-                density: { enable: true, value_area: 800 },
+              color: {
+                value: "#ffffff",
               },
-              color: { value: "#000" },
-              shape: {
-                type: "circle",
-              },
-              opacity: {
-                value: 0.3,
-                random: true,
-                anim: {
-                  enable: false,
-                  speed: 1,
-                  opacity_min: 0.1,
-                  sync: false,
-                },
-              },
-              size: {
-                value: 3,
-                random: true,
-                anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
-              },
-              line_linked: {
-                enable: true,
+              links: {
+                color: "#ffffff",
                 distance: 150,
-                color: "#000",
-                opacity: 0.3,
+                enable: true,
+                opacity: 0.5,
                 width: 1,
               },
               move: {
+                direction: "none",
                 enable: true,
-                speed: 1,
-                direction: "right",
+                outModes: {
+                  default: "bounce",
+                },
                 random: false,
+                speed: 5,
                 straight: false,
-                out_mode: "out",
-                bounce: false,
-                attract: { enable: false, rotateX: 600, rotateY: 1200 },
+              },
+              number: {
+                density: {
+                  enable: true,
+                  area: 1000,
+                },
+                value: 80,
+              },
+              opacity: {
+                value: 0.5,
+              },
+              shape: {
+                type: "circle",
+              },
+              size: {
+                value: { min: 1, max: 3 },
               },
             },
-            interactivity: {
-              detect_on: "canvas",
-              events: {
-                onhover: { enable: true, mode: "grab" },
-                onclick: { enable: true, mode: "repulse" },
-                resize: true,
-              },
-              modes: {
-                grab: { distance: 200, line_linked: { opacity: 0.2 } },
-                repulse: { distance: 200, duration: 0.4 },
-              },
-            },
-            retina_detect: true,
+            detectRetina: true,
           }}
         />{" "}
-        <div className="container mx-auto flex flex-col px-5 py-24 justify-center items-center z-10">
+        <div className="container mx-auto flex flex-col px-5 py-24 justify-center items-center ">
           <div className="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
-            <h1 className="title-font sm:text-8xl text-4xl mb-4 font-medium text-black">
+            <h1 className="title-font sm:text-8xl text-4xl mb-4 font-medium text-white max-[1000px]:w-[100%]">
               Find out the truth!
             </h1>
-            <p className="mb-8 leading-relaxed text-black ">
+            <p className="mb-8 leading-relaxed text-white ">
               ClaimCracker provides a way to quickly find out about truthfulness
               of the claims made by
               <div className="">
@@ -109,24 +114,21 @@ function Hero() {
                 loop
               />
             </p>
-            <div className=" flex flex-wrap justify-center items-end w-[100%] ">
-              <div className="relative sm:flex-grow  text-left  ">
+            <div className="relative  justify-center max-[1000px]:w-[100%] w-[100%] ">
+              <div className="relative   text-left  ">
                 <input
-                  className="w-[100%] p-2  flex bg-inherit border-black rounded-full focus:outline-none text-sm py-3 text-black placeholder-black       border-[1px]"
+                  className="w-[100%] p-[5%]  flex bg-inherit border-white rounded-full focus:outline-none text-sm py-3 text-white placeholder-white       border-[1px]"
                   type="text"
                   placeholder={"  Search"}
                 />
               </div>
-
-              <div className=" text-black  group-hover:bg-gray-200  h-full flex items-center justify-center mb-5 ">
-                <SearchIcon className="w-8 absolute mr-14  " />
-              </div>
+              <SearchIcon className="absolute w-8  right-[15px] top-0  text-white  group-hover:bg-gray-200  h-full flex items-center justify-center" />
             </div>
             <p className="text-sm mt-2 text-gray-200 mb-8 w-full">
               Want to check out how we evaluate claims ?
             </p>
             <div className="flex">
-              <button className="bg-gray-100 inline-flex py-3 px-5  items-center hover:bg-gray-200 focus:outline-none">
+              {/* <button className="bg-gray-100 inline-flex py-3 px-5  items-center hover:bg-gray-200 focus:outline-none">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -139,8 +141,8 @@ function Hero() {
                   <span className="text-xs text-gray-600 mb-1">GET IT ON</span>
                   <span className="title-font font-medium">Google Play</span>
                 </span>
-              </button>
-              <button className="bg-gray-100 inline-flex py-3 px-5  items-center ml-4 hover:bg-gray-200 focus:outline-none">
+              </button> */}
+              {/* <button className="bg-gray-100 inline-flex py-3 px-5  items-center ml-4 hover:bg-gray-200 focus:outline-none">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -156,7 +158,7 @@ function Hero() {
                   </span>
                   <span className="title-font font-medium">App Store</span>
                 </span>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

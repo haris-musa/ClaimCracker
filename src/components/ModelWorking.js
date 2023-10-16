@@ -33,7 +33,7 @@ function ModelWorking() {
     "This is a description, write whatever you need here, this is just text for a test",
   ];
   return (
-    <section className="py-16 pb-[300px] bg-slate-200" id="model">
+    <section className="relative py-16 pb-[300px] bg-slate-200  " id="model">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-3xl font-extrabold text-black">
           Featured Projects
