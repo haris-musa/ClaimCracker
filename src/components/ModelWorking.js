@@ -96,7 +96,7 @@ function ModelWorking() {
     },
   ];
   return (
-    <div className="relative  p-[8%] z-10 bg-gray-100" id="model">
+    <div className="relative  p-[8%] z-10 bg-gray-600" id="model">
       <h1 className=" text-5xl text-black text-center max-[500px]:text-2xl max-[500px]:w-full">
         Why are we the Best?
       </h1>
@@ -107,7 +107,7 @@ function ModelWorking() {
           return (
             <div
               key={index}
-              className="p-[10%] 	bg-white shadow-md rounded-md p-10 group"
+              className="p-[10%] 	bg-white shadow-md rounded-md group"
             >
               {/* Images */}
               <div className=" w-[20%] max-[900px]:m-auto max-[900px]:mb-10 mb-8 items-center  text-5xl  group-hover:scale-110 transition-transform ">
