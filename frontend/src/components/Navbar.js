@@ -20,7 +20,7 @@ function Navbar() {
   };
   return (
     <div>
-      <nav className="fixed w-full  bg-gray-800 p-4 opacity-50 z-50">
+      <nav className="fixed w-full  bg-[#A23FF4] p-4 opacity-50 z-50">
         <div className="flex justify-between items-center">
           <a
             className="flex ml-10 items-center"
@@ -45,34 +45,34 @@ function Navbar() {
                 onClick={(event) => scrollToSection(event, "hero", 200)}
               />
             </a>
-            <a href="#" className="text-white   text-xl hover:text-gray-300">
+            {/* <a href="#" className="text-white   text-xl hover:text-gray-300">
               <NavButtons
-                ButtonText="What is ClaimCracker?"
+                ButtonText="Articles"
                 onClick={(event) => scrollToSection(event, "flow", 200)}
               />
-            </a>
+            </a> */}
             <a href="#" className="text-white  text-xl hover:text-gray-300">
               <NavButtons
-                ButtonText="Claims"
-                onClick={(event) => scrollToSection(event, "claims", 200)}
+                ButtonText="Blogs"
+                onClick={(event) => scrollToSection(event, "articles", 200)}
               />
             </a>
-            <a href="#" className="text-white  text-xl hover:text-gray-300">
+            {/* <a href="#" className="text-white  text-xl hover:text-gray-300">
               <NavButtons
-                ButtonText="Model "
+                ButtonText="Features"
+                onClick={(event) => scrollToSection(event, "model", 200)}
+              />
+            </a> */}
+            <a href="#" className="text-white text-xl hover:text-gray-300">
+              <NavButtons
+                ButtonText="Model"
                 onClick={(event) => scrollToSection(event, "model", 200)}
               />
             </a>
             <a href="#" className="text-white text-xl hover:text-gray-300">
               <NavButtons
-                ButtonText="Working "
-                onClick={(event) => scrollToSection(event, "flow", 200)}
-              />
-            </a>
-            <a href="#" className="text-white text-xl hover:text-gray-300">
-              <NavButtons
                 ButtonText="About Us"
-                onClick={(event) => scrollToSection(event, "about", 200)}
+                onClick={(event) => scrollToSection(event, "flow", 200)}
               />
             </a>
           </div>

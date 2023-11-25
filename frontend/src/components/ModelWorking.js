@@ -96,7 +96,7 @@ function ModelWorking() {
     },
   ];
   return (
-    <div className="relative  p-[8%] z-10 bg-gray-600" id="model">
+    <div className="relative  p-[8%] z-10" id="model">
       <h1 className=" text-5xl text-black text-center max-[500px]:text-2xl max-[500px]:w-full">
         Why are we the Best?
       </h1>

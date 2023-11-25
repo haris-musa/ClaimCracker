@@ -53,7 +53,7 @@ function ArticlesSection() {
       {data.map((i, ind) => {
         return (
           <>
-            <div className=" flex  flex-wrap  lg:w-[30%] p-6  xl:w-[30%] sm:w-full w-full mt-[5%]">
+            <div className="  flex  flex-wrap  lg:w-[30%] p-6  xl:w-[30%] sm:w-full w-full mt-[5%]">
               <div className="    justify-around flex ">
                 {/* First Card */}
 

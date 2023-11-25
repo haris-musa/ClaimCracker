@@ -40,13 +40,13 @@ function CheckedClaim() {
     <div>
       {/* Div containing Rows */}
       <div
-        className="flex flex-wrap  w-[100%]   items-center justify-center sm:flex-auto flex-auto  mt-[5%]"
+        className="flex flex-wrap  w-[100%]  py-[4%] items-center justify-center sm:flex-auto flex-auto  mt-[5%]"
         id="claims"
       >
         {data.map((item, ind) => {
           return (
             <>
-              <div className="flex relative flex-wrap items-center justify-center  p-5  lg:w-[40%] xl:w-[30%] sm:w-full w-full">
+              <div className="flex  relative flex-wrap items-center justify-center  p-10  lg:w-[40%] xl:w-[30%] sm:w-full w-full">
                 {/* FirstCard */}
                 <a
                   href="#"
@@ -70,8 +70,6 @@ function CheckedClaim() {
             </>
           );
         })}
-
-        {/* Third Row End */}
       </div>
     </div>
   );

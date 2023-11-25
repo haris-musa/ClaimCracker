@@ -4,7 +4,7 @@ import animationData from "../assets/phone.json";
 function FlowSection() {
   return (
     <div
-      className="relative p-[5%] flex-rows  bg-gray-600 justify-center w-[100%] mt-[5%]  "
+      className="relative p-[5%] flex-rows  bg-[#A23FF4] justify-center w-[100%] mt-[5%]  "
       id="flow"
     >
       <div className="bg-black relative flex flex-col max-[1000px]:w-[100%] ">
