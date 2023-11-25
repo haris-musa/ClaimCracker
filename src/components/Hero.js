@@ -1,14 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import ParticlesBackground from "./ParticlesBackground";
 import TypingAnimation from "./TypingAnimation";
 
 function Hero() {
+  const [searchText, setSearchText] = useState("");
+  const [prediction, setPrediction] = useState(null);
+
+  const handleInputChange = (e) => {
+    setSearchText(e.target.value);
+  };
+
+  const handleSearchSubmit = async () => {
+    try {
+      const response = await fetch(
+        "http://localhost:8000/api/classifier/predict/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ text: searchText }),
+        }
+      );
+
+      const data = await response.json();
+      setPrediction(data);
+    } catch (error) {
+      console.error("Error fetching prediction:", error);
+    }
+  };
+
   return (
     <>
       <section className="flex h-screen text-gray-600 body-font bg-gradient-to-r from-violet-500 to-fuchsia-500 relative">
         <ParticlesBackground />
-        <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+        <div
+          className="container mx-auto flex px-5 py-24 items-center justify-center flex-col"
+          id="hero"
+        >
           <div className="text-center lg:w-2/3 w-full">
             <h1 className="title-font sm:text-8xl text-4xl mb-4 font-medium text-white">
               Find out the truth!
