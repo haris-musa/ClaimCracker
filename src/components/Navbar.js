@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NavButtons from "../constants/NavButtons";
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
@@ -19,9 +20,16 @@ function Navbar() {
   };
   return (
     <div>
-      <nav className="fixed w-full  bg-gray-800 p-4 opacity-50 z-50" >
+      <nav className="fixed w-full  bg-gray-800 p-4 opacity-50 z-50">
         <div className="flex justify-between items-center">
-          <a className=" flex ml-10 items-center ">
+          <a
+            className="flex ml-10 items-center"
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.reload();
+            }}
+          >
             <img src="/logo.jpg" width={"50px"} alt="" />
             <span className="  lg:ml-3 lg:text-xl lg:text-white lg:cursor-pointer">
               <p className=" hidden sm:hidden md:hidden lg:block text-xl">
@@ -39,8 +47,8 @@ function Navbar() {
             </a>
             <a href="#" className="text-white   text-xl hover:text-gray-300">
               <NavButtons
-                ButtonText="Articles"
-                onClick={(event) => scrollToSection(event, "articles", 200)}
+                ButtonText="What is ClaimCracker?"
+                onClick={(event) => scrollToSection(event, "flow", 200)}
               />
             </a>
             <a href="#" className="text-white  text-xl hover:text-gray-300">
@@ -63,11 +71,10 @@ function Navbar() {
             </a>
             <a href="#" className="text-white text-xl hover:text-gray-300">
               <NavButtons
-                ButtonText="About Us "
+                ButtonText="About Us"
                 onClick={(event) => scrollToSection(event, "about", 200)}
               />
             </a>
-            {/* Add more menu items as needed */}
           </div>
           {/* Hamburger Icon */}
           <div className="lg:hidden">
@@ -100,7 +107,10 @@ function Navbar() {
               href="#"
               className="block mt-2 text-black-500 hover:text-black-400"
             >
-              <NavButtons ButtonText="Home" onClick={() => {}} />
+              <NavButtons
+                ButtonText="Home"
+                onClick={(event) => scrollToSection(event, "hero", 200)}
+              />
             </a>
             <a
               href="#"
@@ -120,11 +130,8 @@ function Navbar() {
             >
               <NavButtons ButtonText="Get involved " onClick={() => {}} />
             </a>
-            {/* Add more menu items as needed */}
           </div>
         )}
-
-        {/* Regular Desktop Menu */}
       </nav>
     </div>
   );
