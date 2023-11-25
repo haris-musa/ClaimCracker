@@ -22,6 +22,7 @@ const ParticlesBackground = () => {
             value: "",
           },
         },
+        fullScreen: { enable: false },
         fpsLimit: 120,
         interactivity: {
           events: {
