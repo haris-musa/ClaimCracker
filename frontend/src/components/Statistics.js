@@ -3,7 +3,7 @@ import CountUp from "react-countup";
 
 function Statistics() {
   return (
-    <section class="relative text-gray-600 body-font bg-gray-100 border-gray-300 mt-[5%]">
+    <section class="relative text-gray-600 body-font bg-gray-100 border-gray-300 ">
       <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-wrap -m-4 text-center">
           <div class="p-4 sm:w-1/4 w-1/2">

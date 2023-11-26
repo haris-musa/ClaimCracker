@@ -32,14 +32,14 @@ function Navbar() {
           >
             <img src="/logo.jpg" width={"50px"} alt="" />
             <span className="  lg:ml-3 lg:text-xl lg:text-white lg:cursor-pointer">
-              <p className=" hidden sm:hidden md:hidden lg:block text-xl">
+              <p className=" hidden sm:hidden md:hidden lg:block text-xl text-[#1D0F41]">
                 ClaimCracker
               </p>
             </span>
           </a>
 
           <div className="hidden lg:flex lg:justify-center lg:m-auto lg:gap-10  space-x-4">
-            <a href="#" className="text-white text-xl hover:text-gray-300">
+            <a href="#" className="text-white text-xl hover:text-[#1D0F41]">
               <NavButtons
                 ButtonText="Home"
                 onClick={(event) => scrollToSection(event, "hero", 200)}
@@ -51,7 +51,7 @@ function Navbar() {
                 onClick={(event) => scrollToSection(event, "flow", 200)}
               />
             </a> */}
-            <a href="#" className="text-white  text-xl hover:text-gray-300">
+            <a href="#" className="text-white  text-xl hover:text-[#1D0F41]">
               <NavButtons
                 ButtonText="Blogs"
                 onClick={(event) => scrollToSection(event, "articles", 200)}
@@ -63,13 +63,13 @@ function Navbar() {
                 onClick={(event) => scrollToSection(event, "model", 200)}
               />
             </a> */}
-            <a href="#" className="text-white text-xl hover:text-gray-300">
+            <a href="#" className="text-white text-xl hover:text-[#1D0F41]">
               <NavButtons
                 ButtonText="Model"
                 onClick={(event) => scrollToSection(event, "model", 200)}
               />
             </a>
-            <a href="#" className="text-white text-xl hover:text-gray-300">
+            <a href="#" className="text-white text-xl hover:text-[#1D0F41]">
               <NavButtons
                 ButtonText="About Us"
                 onClick={(event) => scrollToSection(event, "flow", 200)}

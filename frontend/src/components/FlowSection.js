@@ -4,7 +4,7 @@ import animationData from "../assets/phone.json";
 function FlowSection() {
   return (
     <div
-      className="relative p-[5%] flex-rows  bg-[#A23FF4] justify-center w-[100%] mt-[5%]  "
+      className="relative p-[5%] flex-rows  bg-[#A23FF4] justify-center w-[100%]  "
       id="flow"
     >
       <div className="bg-black relative flex flex-col max-[1000px]:w-[100%] ">
@@ -16,7 +16,7 @@ function FlowSection() {
       </div>
       <div className=" max-[1000px]:w-[100%]">
         {" "}
-        <h1 className=" mb-5 border-b pb-4 text-6xl leading-tight text-white">
+        <h1 className=" mb-5 border-b pb-4 text-6xl leading-tight text-[#1D0F41]">
           Hello, Welcome to ClaimChecker
         </h1>
         <h1 className=" mb-4  pb-4  leading-tight text-4xl text-white">
