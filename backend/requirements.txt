@@ -1,0 +1,17 @@
+django
+djangorestframework
+keras
+django-cors-headers
+numpy
+tensorflow
+pandas
+spacy
+bs4
+textblob
+scikit-learn
+
+# GitHub repository dependencies
+git+https://github.com/laxmimerit/preprocess_kgptalkie.git#egg=preprocess_kgptalkie
+
+# Post-installation script (not in requirements.txt, run separately)
+# python -m spacy download en_core_web_sm
