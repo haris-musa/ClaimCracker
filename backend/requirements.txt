@@ -1,4 +1,5 @@
 django
+django-heroku
 djangorestframework
 keras
 django-cors-headers
@@ -9,6 +10,7 @@ spacy
 bs4
 textblob
 scikit-learn
+gunicorn
 
 # GitHub repository dependencies
 git+https://github.com/laxmimerit/preprocess_kgptalkie.git#egg=preprocess_kgptalkie
