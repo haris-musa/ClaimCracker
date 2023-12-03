@@ -11,7 +11,7 @@ function ModelWorking() {
           height={40}
           dataNimg={1}
           className="w-full h-full object-contain object-center"
-          src="/images/4.svg"
+          src="/static/images/4.svg"
         />
       ),
       title: "Easy Searching",

@@ -3,7 +3,7 @@ import React from "react";
 function CheckedClaim() {
   const data = [
     {
-      image: "./1.jpg",
+      image: "/images/1.jpg",
       heading:
         "The Researcher's Toolkit: Essential Skills for Effective Studies",
       details: "Dummy text",

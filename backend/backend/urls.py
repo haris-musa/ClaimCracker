@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import TemplateView
+from .views import index_view
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/classifier/", include("classifier.urls")),
+    path('', index_view, name='index'),
 ]
