@@ -57,12 +57,29 @@ function Hero() {
             <div className="relative justify-center max-[1000px]:w-[100%] w-[100%]">
               <div className="relative text-left">
                 <input
+                  value={searchText}
+                  onChange={handleInputChange}
                   className="w-[100%] p-[5%] flex bg-inherit border-white rounded-full focus:outline-none text-sm py-3 text-white placeholder-white border-[1px]"
                   type="text"
-                  placeholder={"  Search"}
+                  placeholder="  Search"
                 />
-                <MagnifyingGlassIcon className="absolute w-8 right-[15px] top-0 text-white group-hover:bg-gray-200 h-full flex items-center justify-center" />
+                <button
+                  onClick={handleSearchSubmit}
+                  className="absolute w-8 right-[15px] top-0 text-white group-hover:bg-gray-200 h-full flex items-center justify-center"
+                >
+                  <MagnifyingGlassIcon />
+                </button>
               </div>
+              {prediction && (
+                <div className="my-5 text-white">
+                  <p>LSTM Prediction: {prediction.LSTM ? "Real" : "Fake"}</p>
+                  <p>
+                    Bi-LSTM Prediction:{" "}
+                    {prediction["Bi-LSTM"] ? "Real" : "Fake"}
+                  </p>
+                  <p>RNN Prediction: {prediction.RNN ? "Real" : "Fake"}</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
