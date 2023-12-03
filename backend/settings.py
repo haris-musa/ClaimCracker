@@ -24,7 +24,7 @@ load_dotenv(dotenv_path)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-REACT_APP_DIR = os.path.join(BASE_DIR, 'static/build')
+REACT_APP_DIR = os.path.join(BASE_DIR, 'static/react')
 
 
 # Quick-start development settings - unsuitable for production
@@ -129,9 +129,9 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/build'),
-    os.path.join(BASE_DIR, 'static/build/static'),
-    os.path.join(BASE_DIR, 'static/build/images'),
+    os.path.join(BASE_DIR, 'static/react'),
+    os.path.join(BASE_DIR, 'static/react/static'),
+    os.path.join(BASE_DIR, 'static/react/images'),
 ]
 
 # Default primary key field type
