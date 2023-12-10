@@ -12,6 +12,57 @@ from keras.backend import manual_variable_initialization
 import pandas as pd
 from sklearn.utils import shuffle
 from numpy.lib.shape_base import split
+from numpy import dstack
+from sklearn.linear_model import LogisticRegression
+
+# def stacked_dataset(members, inputX):
+# 	stackX = None
+# 	for model in members:
+
+# 		yhat = model.predict(inputX, verbose=0)
+
+# 		if stackX is None:
+# 			stackX = yhat #
+# 		else:
+# 			stackX = dstack((stackX, yhat))
+
+# 	stackX = stackX.reshape((stackX.shape[0], stackX.shape[1]*stackX.shape[2]))
+# 	return stackX
+
+# dependencies = {
+#     'accuracy': accuracy_score
+# }
+
+# def load_all_models(n_models):
+# 	all_models = list()
+# 	for i in range(n_models):
+
+# 		filename = 'model' + str(i + 1) + '.h5'
+
+# 		model = load_model(filename,custom_objects=dependencies)
+
+# 		all_models.append(model)
+# 	return all_models
+
+# def fit_stacked_model(members, inputX, inputy):
+
+# 	stackedX = stacked_dataset(members, inputX)
+
+# 	model = LogisticRegression()
+# 	model.fit(stackedX, inputy)
+# 	return model
+
+# n_members = 5
+# members = load_all_models(n_members)
+
+# model = fit_stacked_model(members, X_test,y_test)
+
+# def stacked_prediction(members, model, inputX):
+
+# 	stackedX = stacked_dataset(members, inputX)
+
+# 	yhat = model.predict(stackedX)
+# 	return yhat
 
 @api_view(["POST"])
 def predict(request):
@@ -59,10 +110,8 @@ def predict(request):
     model1 = load_model("classifier/models/model1.h5")
     model2 = load_model("classifier/models/model2.h5")
     model3 = load_model("classifier/models/model3.h5")
-
-    model1.load_weights('classifier/models/model1_weights.h5')
-    model2.load_weights('classifier/models/model2_weights.h5')
-    model3.load_weights('classifier/models/model3_weights.h5')
+    model4 = load_model("classifier/models/model4.h5")
+    model5 = load_model("classifier/models/model5.h5")
    
     tokenized_text = tokenizer.texts_to_sequences([news_text])
     padded_text = pad_sequences(tokenized_text, maxlen=1000)
@@ -70,11 +119,17 @@ def predict(request):
     pred1 = (model1.predict(padded_text) >= 0.5).astype(int)
     pred2 = (model2.predict(padded_text) >= 0.5).astype(int)
     pred3 = (model3.predict(padded_text) >= 0.5).astype(int)
+    pred4 = (model4.predict(padded_text) >= 0.5).astype(int)
+    pred5 = (model5.predict(padded_text) >= 0.5).astype(int)
+	
+    #predictionStacked = (model.predict(padded_text) >= 0.5).astype(int)
 
     print(pred1)
     print(pred2)
     print(pred3)
+    print(pred4)
+    print(pred5)
 
     return JsonResponse(
-        {"LSTM": int(pred1[0]), "Bi-LSTM": int(pred2[0]), "RNN": int(pred3[0])}
+        {"LSTM": int(pred1[0]), "Bi-LSTM": int(pred2[0]), "RNN": int(pred3[0]), "CNN": int(pred4[0]), "GRU": int(pred5[0])}
     )

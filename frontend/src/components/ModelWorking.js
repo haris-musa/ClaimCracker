@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React from "react";
 import Image from "../constants/Image";
 function ModelWorking() {
   const CardsData = [

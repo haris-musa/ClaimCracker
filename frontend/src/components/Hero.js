@@ -154,6 +154,8 @@ function Hero({ onPredict }) {
                     {prediction["Bi-LSTM"] ? "Real" : "Fake"}
                   </p>
                   <p>RNN Prediction: {prediction.RNN ? "Real" : "Fake"}</p>
+                  <p>CNN Prediction: {prediction.CNN ? "Real" : "Fake"}</p>
+                  <p>GRU Prediction: {prediction.GRU ? "Real" : "Fake"}</p>
                 </div>
               )}
             </div>

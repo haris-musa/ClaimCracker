@@ -43,26 +43,26 @@ function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden lg:flex lg:justify-center lg:m-auto lg:gap-10  space-x-4">
             {/* Nav Items */}
-            <a href="#" className="text-gray-300 text-xl hover:text-[#1D0F41]">
+            <a href="/#" className="text-gray-300 text-xl hover:text-[#1D0F41]">
               <NavButtons
                 ButtonText="Home"
                 onClick={(event) => scrollToSection(event, "hero")}
               />
             </a>
             {/* More Nav Items... */}
-            <a href="#" className="text-gray-300 text-xl hover:text-[#1D0F41]">
+            <a href="/#" className="text-gray-300 text-xl hover:text-[#1D0F41]">
               <NavButtons
                 ButtonText="Blogs"
                 onClick={(event) => scrollToSection(event, "articles")}
               />
             </a>
-            <a href="#" className="text-gray-300 text-xl hover:text-[#1D0F41]">
+            <a href="/#" className="text-gray-300 text-xl hover:text-[#1D0F41]">
               <NavButtons
                 ButtonText="Model"
                 onClick={(event) => scrollToSection(event, "model")}
               />
             </a>
-            <a href="#" className="text-gray-300 text-xl hover:text-[#1D0F41]">
+            <a href="/#" className="text-gray-300 text-xl hover:text-[#1D0F41]">
               <NavButtons
                 ButtonText="About Us"
                 onClick={(event) => scrollToSection(event, "flow")}
@@ -98,26 +98,26 @@ function Navbar() {
         {/* Dropdown Menu */}
         {isOpen && (
           <div className="lg:hidden absolute right-0 mt-2 py-2 px-4 bg-purple-600 rounded-lg shadow-lg text-white">
-            <a href="#" className="block mt-2 text-xl hover:text-[#1D0F41]">
+            <a href="/#" className="block mt-2 text-xl hover:text-[#1D0F41]">
               <NavButtons
                 ButtonText="Home"
                 onClick={(event) => scrollToSection(event, "hero")}
               />
             </a>
             {/* More Mobile Menu Items... */}
-            <a href="#" className="block mt-2 text-xl hover:text-[#1D0F41]">
+            <a href="/#" className="block mt-2 text-xl hover:text-[#1D0F41]">
               <NavButtons
                 ButtonText="Blogs"
                 onClick={(event) => scrollToSection(event, "articles")}
               />
             </a>
-            <a href="#" className="block mt-2 text-xl hover:text-[#1D0F41]">
+            <a href="/#" className="block mt-2 text-xl hover:text-[#1D0F41]">
               <NavButtons
                 ButtonText="Model"
                 onClick={(event) => scrollToSection(event, "model")}
               />
             </a>
-            <a href="#" className="block mt-2 text-xl hover:text-[#1D0F41]">
+            <a href="/#" className="block mt-2 text-xl hover:text-[#1D0F41]">
               <NavButtons
                 ButtonText="About Us"
                 onClick={(event) => scrollToSection(event, "flow")}
