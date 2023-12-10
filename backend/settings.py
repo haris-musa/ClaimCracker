@@ -51,6 +51,9 @@ INSTALLED_APPS = [
     "rest_framework",
     "classifier",
     "corsheaders",
+    'research_papers',
+    'claimbuster',
+    'questions',
 ]
 
 MIDDLEWARE = [

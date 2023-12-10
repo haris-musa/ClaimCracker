@@ -4,6 +4,11 @@
   color: rgb(255, 255, 255);
 }
 
+.typing-answer {
+  font-size: 1.1em;
+  color: rgb(255, 255, 255);
+}
+
 #tsparticles {
   position: absolute;
   top: 0;
@@ -11,4 +16,39 @@
   width: 100%;
   height: 100%;
   z-index: 0;
+}
+
+.questions-container {
+  margin-top: 60px;
+  padding-top: 20px;
+}
+
+.question-box {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Semi-transparent white background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px; /* Padding inside the boxes */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px; /* Fixed height for uniformity */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.question-box:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Slightly darker on hover */
+}
+
+.question-box-clicked {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.4
+  ); /* Different background to indicate click */
 }

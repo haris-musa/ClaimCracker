@@ -17,7 +17,7 @@ function FlowSection() {
       <div className=" max-[1000px]:w-[100%]">
         {" "}
         <h1 className=" mb-5 border-b pb-4 text-6xl leading-tight text-[#1D0F41]">
-          Hello, Welcome to ClaimChecker
+          Hello, Welcome to ClaimCracker
         </h1>
         <h1 className=" mb-4  pb-4  leading-tight text-4xl text-white">
           Check your Facts with Claim Cracker{" "}
@@ -35,13 +35,11 @@ function FlowSection() {
         </p>
         <br />
         <p className="max-[1000px]:w-[100%] text-2xl text-white w-[40%] text-left">
-          After the analysis is complete, our platform highlights parts of the
-          text that might be inaccurate or contentious, providing you with
-          relevant sources or references for each identified claim.It's worth
-          noting that while our system is designed to be highly accurate, no
-          fact-checking tool can guarantee 100% accuracy. We always recommend
-          reviewing the provided sources and using your judgment i interpreting
-          the results.
+          After the analysis is complete, our platform highlights the text that
+          might be inaccurate or contentious, providing you the results by
+          verifying with relevant sources or references for each identified
+          claim. It's worth noting that while our system is designed to be
+          highly accurate, no fact-checking tool can guarantee 100% accuracy.
         </p>
       </div>
     </div>

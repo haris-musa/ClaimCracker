@@ -11,11 +11,11 @@ function ModelWorking() {
           height={40}
           dataNimg={1}
           className="w-full h-full object-contain object-center"
-          src="/static/images/4.svg"
+          src="/images/4.svg"
         />
       ),
       title: "Easy Searching",
-      text: "Effortlessly find people using fields like name, department, and job title with OrgFlow's powerful search features.",
+      text: "Easily identify valid claims in a sea of information with ClaimCracker's advanced search and detection capabilities.",
     },
     {
       image: (
@@ -29,8 +29,8 @@ function ModelWorking() {
         />
       ),
 
-      title: "Microsoft's Card",
-      text: "Connect, collaborate, and gather information easily with Microsoft's User Card integrated with OrgFlow.",
+      title: "Claim Verification",
+      text: "Seamlessly integrate credible sources and data with ClaimCracker, enhancing accuracy and reliability in claim verification.",
     },
     {
       image: (
@@ -44,8 +44,8 @@ function ModelWorking() {
         />
       ),
 
-      title: "Seamless Charts",
-      text: "Create, visualize, and export organizational charts as image or Excel files with OrgFlow's versatile capabilities.",
+      title: "Data Visualization",
+      text: "Efficiently analyze and visualize the authenticity of political claims with ClaimCracker's dynamic statistics.",
     },
 
     {
@@ -59,8 +59,8 @@ function ModelWorking() {
           src="/images/1.svg"
         />
       ),
-      title: "Highly Customizable",
-      text: "Tailor your organizational charts to perfection with OrgFlow's robust customization options. ",
+      title: "Customized Analysis",
+      text: "Customize your fact-checking experience with ClaimCracker's flexible interface, tailored to your specific needs for accuracy and ease.",
     },
 
     {
@@ -75,8 +75,8 @@ function ModelWorking() {
         />
       ),
 
-      title: "Team Visualization",
-      text: "Create, visualize, and export organizational charts as image or Excel files with OrgFlow's versatile capabilities.",
+      title: "Collaborative Fact-Checking",
+      text: "Collaborate effectively with a team of fact-checkers using ClaimCracker's intuitive results of claim verification processes.",
     },
 
     {
@@ -91,8 +91,8 @@ function ModelWorking() {
         />
       ),
 
-      title: "Team Collaboration",
-      text: "Create, visualize, and export organizational charts as image or Excel files with OrgFlow's versatile capabilities.",
+      title: "Real-Time Updates",
+      text: "Enhance teamwork in debunking false information with ClaimCracker's collaborative platform, promoting informed decision-making.",
     },
   ];
   return (

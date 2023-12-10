@@ -22,5 +22,8 @@ from .views import index_view
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/classifier/", include("classifier.urls")),
-    path('', index_view, name='index'),
+    path('research_papers/', include('research_papers.urls')),
+    path('api/', include('claimbuster.urls')),
+    path('api/questions/', include('questions.urls')),
+    #path('', index_view, name='index'),
 ]
