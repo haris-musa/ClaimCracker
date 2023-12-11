@@ -148,14 +148,7 @@ function Hero({ onPredict }) {
               )}
               {prediction && (
                 <div className="my-5 text-white">
-                  <p>LSTM Prediction: {prediction.LSTM ? "Real" : "Fake"}</p>
-                  <p>
-                    Bi-LSTM Prediction:{" "}
-                    {prediction["Bi-LSTM"] ? "Real" : "Fake"}
-                  </p>
-                  <p>RNN Prediction: {prediction.RNN ? "Real" : "Fake"}</p>
-                  <p>CNN Prediction: {prediction.CNN ? "Real" : "Fake"}</p>
-                  <p>GRU Prediction: {prediction.GRU ? "Real" : "Fake"}</p>
+                  <p>Prediction: {prediction.Ensemble ? "Real" : "Fake"}</p>
                 </div>
               )}
             </div>

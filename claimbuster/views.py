@@ -1,11 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
 import requests
-import json
-
+import os
 
 @api_view(["POST"])
 def check_claim(request):
@@ -13,6 +11,7 @@ def check_claim(request):
     if not claim:
         return JsonResponse({"error": "No claim found in request data"}, status=400)
 
+    api_key = os.getenv("CLAIMBUSTER_API_KEY")
     api_key = "75167b5235864e74b8b10a3dd25458f0"
     api_endpoint = "https://idir.uta.edu/claimbuster/api/v2/score/text/"
     request_headers = {"x-api-key": api_key}
