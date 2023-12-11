@@ -149,6 +149,10 @@ function Hero({ onPredict }) {
               {prediction && (
                 <div className="my-5 text-white">
                   <p>Prediction: {prediction.Ensemble ? "Real" : "Fake"}</p>
+                  <p>
+                    Probability:{" "}
+                    {(prediction.Ensemble_Probability * 100).toFixed(2)}%
+                  </p>
                 </div>
               )}
             </div>

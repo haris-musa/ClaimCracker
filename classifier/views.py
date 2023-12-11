@@ -30,6 +30,7 @@ def predict(request):
     pred5 = (model5.predict(padded_text) >= 0.5).astype(int)
 
     stacked_predictions = np.hstack((pred1, pred2, pred3, pred4, pred5))
+    mean_probability = np.mean(stacked_predictions, axis=1)
 
     final_prediction = np.mean(stacked_predictions, axis=1) >= 0.5
 
@@ -39,5 +40,6 @@ def predict(request):
         "RNN": int(pred3[0] >= 0.5),
         "CNN": int(pred4[0] >= 0.5),
         "GRU": int(pred5[0] >= 0.5),
-        "Ensemble": int(final_prediction[0])
+        "Ensemble": int(final_prediction[0]),
+        "Ensemble_Probability": float(mean_probability)
     })
