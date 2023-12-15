@@ -18,5 +18,7 @@ openai
 # GitHub repository dependencies
 git+https://github.com/laxmimerit/preprocess_kgptalkie.git#egg=preprocess_kgptalkie
 
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.3/en_core_web_sm-3.7.3.tar.gz
+
 # Post-installation script (not in requirements.txt, run separately)
 # python -m spacy download en_core_web_sm
