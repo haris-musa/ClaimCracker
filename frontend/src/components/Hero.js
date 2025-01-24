@@ -3,6 +3,9 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import ParticlesBackground from "./ParticlesBackground";
 import TypingAnimation from "./TypingAnimation";
 
+// Use environment variable or fallback to localhost for development
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8000";
+
 function Hero({ onPredict }) {
   const [searchText, setSearchText] = useState("");
   const [prediction, setPrediction] = useState(null);
@@ -14,7 +17,7 @@ function Hero({ onPredict }) {
 
   const validateClaim = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/check_claim/", {
+      const response = await fetch(`${API_URL}/api/check_claim/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -44,16 +47,13 @@ function Hero({ onPredict }) {
 
     setValidationMessage("");
     try {
-      const response = await fetch(
-        "http://localhost:8000/api/classifier/predict/",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ text: searchText }),
-        }
-      );
+      const response = await fetch(`${API_URL}/api/classifier/predict/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ text: searchText }),
+      });
 
       const data = await response.json();
       setPrediction(data);
