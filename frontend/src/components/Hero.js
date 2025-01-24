@@ -1,53 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import ParticlesBackground from "./ParticlesBackground";
 import TypingAnimation from "./TypingAnimation";
-import OneWayTypingAnimation from "./OneWayTypingAnimation";
-import questions from "../questions.json";
 
 function Hero({ onPredict }) {
   const [searchText, setSearchText] = useState("");
   const [prediction, setPrediction] = useState(null);
   const [validationMessage, setValidationMessage] = useState("");
-  const [randomQuestions, setRandomQuestions] = useState([]);
-  const [selectedQuestion, setSelectedQuestion] = useState(null);
-  const [isTyping, setIsTyping] = useState(false);
-  const [answer, setAnswer] = useState(null);
-
-  useEffect(() => {
-    const getRandomQuestions = () => {
-      const shuffled = questions.sort(() => 0.5 - Math.random());
-      return shuffled.slice(0, 4);
-    };
-
-    setRandomQuestions(getRandomQuestions());
-  }, []);
-
-  const handleQuestionClick = async (question) => {
-    setSelectedQuestion(question);
-    setAnswer(null);
-    setIsTyping(false);
-    try {
-      const response = await fetch("http://localhost:8000/api/questions/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ question: question }),
-      });
-
-      const data = await response.json();
-      if (response.ok) {
-        setIsTyping(true);
-        setAnswer(data.answer);
-      } else {
-        setValidationMessage(data.error || "Error fetching answer");
-      }
-    } catch (error) {
-      console.error("Error fetching answer:", error);
-      setValidationMessage("Error fetching answer");
-    }
-  };
 
   const handleInputChange = (e) => {
     setSearchText(e.target.value);
@@ -156,45 +115,6 @@ function Hero({ onPredict }) {
                 </div>
               )}
             </div>
-            <div className="questions-container grid grid-cols-2 gap-4 my-8">
-              {randomQuestions.map((question, index) => (
-                <div
-                  key={index}
-                  className={
-                    "question-box p-4 bg-white bg-opacity-20 rounded-md cursor-pointer" +
-                    (selectedQuestion === question
-                      ? " question-box-clicked"
-                      : "")
-                  }
-                  onClick={() => handleQuestionClick(question)}
-                  style={{
-                    transform:
-                      selectedQuestion === question
-                        ? "scale(0.98)"
-                        : "scale(1)",
-                    boxShadow:
-                      selectedQuestion === question
-                        ? "0px 0px 10px rgba(255, 255, 255, 0.6)"
-                        : "none",
-                  }}
-                >
-                  <p className="text-white">{question}</p>
-                </div>
-              ))}
-            </div>
-            {answer && (
-              <div className="answer-container text-white my-8">
-                {isTyping ? (
-                  <OneWayTypingAnimation
-                    className="md:text-2xl sm:text-xl text-lg font-medium answer-typing-animation"
-                    text={answer}
-                    typeSpeed={25}
-                  />
-                ) : (
-                  answer && <p>{answer}</p>
-                )}
-              </div>
-            )}
           </div>
         </div>
       </section>

@@ -13,7 +13,6 @@ scikit-learn
 gunicorn
 python-dotenv
 arxiv
-openai
 
 # GitHub repository dependencies
 git+https://github.com/laxmimerit/preprocess_kgptalkie.git#egg=preprocess_kgptalkie

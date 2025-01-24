@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     "corsheaders",
     'research_papers',
     'claimbuster',
-    'questions',
 ]
 
 MIDDLEWARE = [
